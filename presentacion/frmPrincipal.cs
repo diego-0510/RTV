@@ -82,7 +82,7 @@ namespace presentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            carro.leerXML();
         }
 
         private void lblInforamcion_Click(object sender, EventArgs e)
@@ -90,10 +90,14 @@ namespace presentacion
 
         }
 
-        
+        private void MenuStrip1_MouseLeave(object sender, EventArgs e)
+        {
 
-        
+        }
 
-        
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            carro.guardarXML();
+        }
     }
 }
